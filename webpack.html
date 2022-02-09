@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet/less" type="text/css" href="css/1.less" />
+    <script src="./less.min.js" ></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+          <!-- webpack 是前端资源打包工具 ， 一个静态模块打包器 -->
+  <h1 id="title">heel</h1>
+</body>
+</html>
+<script src="jquery.min.js"></script>
+ <script>
+       $("#title").click(()=>{
+            $("body").css("backgroundColor","black");
+       })
+ </script>
+
+  <!-- 
+
+   webpack五个核心概念
+     entry 
+      入口指示 webpack 以哪个文件为入口起点 开始打包，分析构架你内部依赖图
+     output
+    指示webpack打包后的资源 bundles输出到哪里去 以及如何命名
+    loader
+     指示webpack去处理非js文件（webpack自身只能理解js）
+     plugins
+      插件， 范围包括打包优化和压缩，重新定义环境中的变量
+       mode
+       模式 能使用两种不同模式 development 和 produnction 开发模式和生产模式 分别本地调试和代码线上运行环境
+
+   npm init 初始化
+   npm i webpack webpack-cli -g //本地安装
+npm i webpack webpack-cli -D  // 开发依赖
+
+   -->
+   
+   /*
+index.Js:webpack 入口起点文件
+ 
+
+
+  //运行指令 
+   开发环境指令:  ./index.js -o  ./build/built.js --mode=development
+    webpack 会以index.js为入口文件开始打包 打包输出到 build/built.js 整体打包环境是开发环境
+  
+  和生产环境指令
+./index.js -o  ./build/built.js --mode=production //生产环境
+*/
+   function add(x,y){
+  return x+y;
+   }
+   console.log(add(1,2));
